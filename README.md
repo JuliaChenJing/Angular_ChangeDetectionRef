@@ -3,13 +3,12 @@
 </a>
 <br>
 
-abstract class ChangeDetectorRef {
-  abstract markForCheck(): void
-  abstract detach(): void
-  abstract detectChanges(): void
-  abstract checkNoChanges(): void
-  abstract reattach(): void
-}
+
+-   abstract markForCheck(): void
+-   abstract detach(): void
+-   abstract detectChanges(): void
+-   abstract checkNoChanges(): void
+-   abstract reattach(): void
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
