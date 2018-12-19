@@ -9,6 +9,8 @@ export class GiantList {
     dataProvider = [1, 2, 3, 4, 5];
     constructor(private ref: ChangeDetectorRef) {
         ref.detach();
-        setInterval(() => { this.ref.detectChanges(); }, 3000);
+        setInterval(() => {
+            this.ref.detectChanges();
+        }, 3000);
     }
 }
