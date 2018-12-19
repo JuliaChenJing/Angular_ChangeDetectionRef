@@ -1,15 +1,14 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
-import { DataListProvider } from './models/data-list-provider.model';
 
 @Component({
     selector: 'giant-list',
-    template: `
-        <li *ngFor="let d of dataProvider.data">Data {{d}}</li>
-      `,
+    templateUrl: 'giant-list.component.html',
 })
 export class GiantList {
-    constructor(private ref: ChangeDetectorRef, private dataProvider: DataListProvider) {
+
+    dataProvider = [1, 2, 3, 4, 5];
+    constructor(private ref: ChangeDetectorRef) {
         ref.detach();
-        setInterval(() => { this.ref.detectChanges(); }, 5000);
+        setInterval(() => { this.ref.detectChanges(); }, 3000);
     }
 }
