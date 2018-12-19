@@ -1,6 +1,7 @@
 # ChangeDetectionRef
 <a href="https://angular.io/api/core/ChangeDetectorRef#use-markforcheck-with-checkonce-strategy/">Angular:ChangeDetectorRef
 </a>
+<br>
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.3.
 
 ## Development server
