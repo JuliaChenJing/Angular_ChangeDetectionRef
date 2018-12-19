@@ -1,5 +1,5 @@
-import { Component, ChangeDetectionStrategy, Input, OnInit } from '@angular/core';
-import { Subject } from 'rxjs/Subject';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -7,13 +7,6 @@ import { Subject } from 'rxjs/Subject';
   styleUrls: ['./app.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
 
-  attachOrDetachNotifier: Subject<any> = new Subject();
-
-  ngOnInit(): void {
-    this.attachOrDetachNotifier.subscribe((val) => {
-      console.log('--------------app.component.ts-----------------');
-    });
-  }
 }
