@@ -1,12 +1,19 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
-
+import { Component, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  template: `Number of ticks: {{numberOfTicks}}`,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {
 
+export class AppComponent {
+  numberOfTicks = 0;
+
+  constructor(private ref: ChangeDetectorRef) {
+    setInterval(() => {
+      this.numberOfTicks++;
+      // require view to be updated
+      this.ref.markForCheck();
+    }, 1000);
+  }
 }
