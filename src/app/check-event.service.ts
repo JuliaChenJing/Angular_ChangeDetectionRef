@@ -2,7 +2,7 @@ import { Injectable, NgZone, ViewContainerRef } from '@angular/core';
 
 @Injectable()
 export class CheckEventService {
-  constructor() {}
+  constructor() { }
 
   checkEvent(vr: ViewContainerRef, zone: NgZone, className: string = 'checked') {
     const a = vr.element.nativeElement.querySelector('a');
@@ -10,10 +10,8 @@ export class CheckEventService {
 
     zone.runOutsideAngular(() => {
       setTimeout(() => {
-        a.style.backgroundColor = 'blue';
+        a.style.backgroundColor = 'yellow';
       }, 2000);
-  });
-
-
+    });
   }
 }
