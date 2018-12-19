@@ -1,20 +1,19 @@
-import { Component, ChangeDetectionStrategy, Input, OnInit } from '@angular/core';
-import { Subject } from 'rxjs/Subject';
+import { Component, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  changeDetection : ChangeDetectionStrategy.OnPush
+  templateUrl: 'app.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent implements OnInit {
 
+export class AppComponent {
+  numberOfTicks = 0;
 
-  attachOrDetachNotifier: Subject<any> = new Subject();
-
-  ngOnInit(): void {
-    // this.attachOrDetachNotifier.subscribe((val) => {
-    //   console.log('TEST 구독');
-    // });
+  constructor(private ref: ChangeDetectorRef) {
+    setInterval(() => {
+      this.numberOfTicks++;
+      // require view to be updated
+      this.ref.markForCheck();
+    }, 1000);
   }
 }

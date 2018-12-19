@@ -1,5 +1,14 @@
+<a href="https://angular.io/api/core/ChangeDetectorRef#use-markforcheck-with-checkonce-strategy/">Angular:ChangeDetectorRef
+</a>
 
-<app-togle-event [notifier]="attachOrDetachNotifier"></app-togle-event>
+<h2>demo 1 : markForCheck()</h2>
+<h1>Number of ticks: {{numberOfTicks}}</h1>
+<br>
 
-<!-- 별도의 이벤트 감지를 위해서 한번 다른 컴포넌트 감싸서 CD 격리 시킴 -->
-<app-tree [notifier]="attachOrDetachNotifier" ></app-tree>
+<h2>demo 2 : detactChanges()</h2>
+<giant-list></giant-list>
+<br>
+<br>
+
+<h2>demo 3 :reattach() and detach()</h2>
+<app1></app1>
