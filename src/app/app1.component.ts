@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { DataProvider } from './data-provider.component';
+import { DataProvider } from './models/data-provider.model';
 
 @Component({
     selector: 'app1',

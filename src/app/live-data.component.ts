@@ -1,5 +1,5 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
-import {DataProvider} from './data-provider.model';
+import {DataProvider} from './models/data-provider.model';
 
 
 @Component({

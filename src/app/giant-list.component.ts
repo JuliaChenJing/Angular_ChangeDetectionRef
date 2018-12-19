@@ -1,10 +1,5 @@
-import { Component, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
-
-
-class DataListProvider {
-    // in a real application the returned data will be different every time
-    get data() { return [1, 2, 3, 4, 5]; }
-}
+import { Component, ChangeDetectorRef } from '@angular/core';
+import { DataListProvider } from './models/data-list-provider.model';
 
 @Component({
     selector: 'giant-list',
@@ -12,7 +7,7 @@ class DataListProvider {
         <li *ngFor="let d of dataProvider.data">Data {{d}}</li>
       `,
 })
-class GiantList {
+export class GiantList {
     constructor(private ref: ChangeDetectorRef, private dataProvider: DataListProvider) {
         ref.detach();
         setInterval(() => { this.ref.detectChanges(); }, 5000);
