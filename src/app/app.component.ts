@@ -13,7 +13,9 @@ export class AppComponent {
     setInterval(() => {
       this.numberOfTicks++;
       // require view to be updated
-      this.ref.markForCheck();
+      // both is fine here
+      this.ref.markForCheck(); // 1 know it is a change
+      // this.ref.detectChanges(); // 2 detect if there is a change
     }, 1000);
   }
 }
