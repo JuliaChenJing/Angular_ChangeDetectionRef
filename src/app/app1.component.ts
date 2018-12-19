@@ -9,6 +9,6 @@ import { DataProvider } from './data-provider.component';
          <live-data [live]="live"><live-data>
        `,
 })
-class App1 {
+export class App1 {
     live = true;
 }

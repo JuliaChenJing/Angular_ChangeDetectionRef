@@ -2,7 +2,7 @@ import { Component, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/
 
 @Component({
   selector: 'app-root',
-  template: `Number of ticks: {{numberOfTicks}}`,
+  templateUrl: 'app.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
