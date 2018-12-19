@@ -5,16 +5,15 @@ import { Subject } from 'rxjs/Subject';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  changeDetection : ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AppComponent implements OnInit {
-
 
   attachOrDetachNotifier: Subject<any> = new Subject();
 
   ngOnInit(): void {
-    // this.attachOrDetachNotifier.subscribe((val) => {
-    //   console.log('TEST 구독');
-    // });
+    this.attachOrDetachNotifier.subscribe((val) => {
+      console.log('--------------app.component.ts-----------------');
+    });
   }
 }

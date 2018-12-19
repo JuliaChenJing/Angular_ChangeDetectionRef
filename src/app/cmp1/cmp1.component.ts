@@ -9,14 +9,13 @@ import { CheckEventService } from '../check-event.service';
 })
 export class Cmp1Component implements OnInit, AfterViewChecked {
 
-  constructor(private ch: CheckEventService, private el: ViewContainerRef, private zone: NgZone) {}
+  constructor(private checkEventService: CheckEventService, private viewContainerRef: ViewContainerRef, private zone: NgZone) { }
+
   ngAfterViewChecked(): void {
-    console.log('TEST');
-    // this.msg = '변화감지!';
-    this.ch.checkEvent(this.el, this.zone , '');
+    console.log('cmp1');
+    this.checkEventService.checkEvent(this.viewContainerRef, this.zone, '');
   }
 
   ngOnInit() {
   }
-
 }

@@ -1,5 +1,4 @@
-
 <app-togle-event [notifier]="attachOrDetachNotifier"></app-togle-event>
 
-<!-- 별도의 이벤트 감지를 위해서 한번 다른 컴포넌트 감싸서 CD 격리 시킴 -->
-<app-tree [notifier]="attachOrDetachNotifier" ></app-tree>
+<!-- Separate other components to isolate the CD for separate event detection-->
+<app-tree [notifier]="attachOrDetachNotifier"></app-tree>
