@@ -6,14 +6,14 @@ import { Subject } from 'rxjs/Subject';
   selector: 'app-togle-event',
   templateUrl: './togle-event.component.html',
   styleUrls: ['./togle-event.component.css'],
-  changeDetection : ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class TogleEventComponent implements OnInit {
-  @Input()
-  notifier: Subject<any>;
+  @Input() notifier: Subject<any>;
 
 
   constructor(private togleEventService: TogleEventService) { }
+
   ngOnInit() {
   }
 
